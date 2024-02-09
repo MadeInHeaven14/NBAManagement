@@ -41,369 +41,63 @@ namespace NBAManagement
 
         public void FillAtlantic()
         {
-            TextBox tb = new TextBox()
-            {
-                TextWrapping = TextWrapping.Wrap,
-                Text = "Atlantic",
-                VerticalAlignment = VerticalAlignment.Top,
-                IsEnabled = false,
-                Background = new SolidColorBrush(Colors.LightGray),
-                FontSize = 14,
-                HorizontalContentAlignment = HorizontalAlignment.Center,
-                VerticalContentAlignment = VerticalAlignment.Center,
-            };
-            Atlantic_Grid.Children.Add(tb);
-            Grid.SetRow(tb, 0);
+            List<Team> atlanticTeams = new List<Team>();
             for (int i = 0; i < 5; i++)
             {
-                RowDefinition row = new RowDefinition()
-                {
-                    Height = new GridLength(80),
-                };
-                Atlantic_Grid.RowDefinitions.Add(row);
-                Rectangle rct = new Rectangle()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    Height = 80,
-                    Stroke = new SolidColorBrush(Colors.Gray),
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Width = 342,
-                    StrokeThickness = 2,
-                };
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.UriSource = new Uri("pack://application:,,,/Teams/1.jpg");
-                System.Windows.Controls.Image img = new System.Windows.Controls.Image()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    Height = 66,
-                    Width = 66,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Source = bitmap,
-                    Margin = new Thickness(10, 0, 0, 0)
-                };
-                Label lb = new Label()
-                {
-                    Content = teams[j].Name,
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    IsEnabled = false,
-                    Width = 250,
-                    Margin = new Thickness(81, 7, 0, 0)
-                };
+                atlanticTeams.Add(teams[j]);
                 j++;
-
-                Atlantic_Grid.Children.Add(lb);
-                Grid.SetRow(lb, i + 1);
-                Atlantic_Grid.Children.Add(img);
-                Grid.SetRow(img, i + 1);
-                Atlantic_Grid.Children.Add(rct);
-                Grid.SetRow(rct, i + 1);
             }
+            lv_Atlantic.ItemsSource = atlanticTeams;
         }
         public void FillCentral()
         {
-            TextBox tb = new TextBox()
-            {
-                TextWrapping = TextWrapping.Wrap,
-                Text = "Central",
-                VerticalAlignment = VerticalAlignment.Top,
-                IsEnabled = false,
-                Background = new SolidColorBrush(Colors.LightGray),
-                FontSize = 14,
-                HorizontalContentAlignment = HorizontalAlignment.Center,
-                VerticalContentAlignment = VerticalAlignment.Center,
-            };
-            Central_Grid.Children.Add(tb);
-            Grid.SetRow(tb, 0);
+            List<Team> centralTeams = new List<Team>();
             for (int i = 0; i < 5; i++)
             {
-                RowDefinition row = new RowDefinition()
-                {
-                    Height = new GridLength(80),
-                };
-                Central_Grid.RowDefinitions.Add(row);
-                Rectangle rct = new Rectangle()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    Height = 80,
-                    Stroke = new SolidColorBrush(Colors.Gray),
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Width = 342,
-                    StrokeThickness = 2,
-                };
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.UriSource = new Uri("pack://application:,,,/Teams/1.jpg");
-                System.Windows.Controls.Image img = new System.Windows.Controls.Image()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    Height = 66,
-                    Width = 66,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Source = bitmap,
-                    Margin = new Thickness(10, 0, 0, 0)
-                };
-                Label lb = new Label()
-                {
-                    Content = teams[j].Name,
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    IsEnabled = false,
-                    Width = 250,
-                    Margin = new Thickness(81, 7, 0, 0)
-                };
+                centralTeams.Add(teams[j]);
                 j++;
-
-                Central_Grid.Children.Add(lb);
-                Grid.SetRow(lb, i + 1);
-                Central_Grid.Children.Add(img);
-                Grid.SetRow(img, i + 1);
-                Central_Grid.Children.Add(rct);
-                Grid.SetRow(rct, i + 1);
             }
+            lv_Central.ItemsSource = centralTeams;
         }
         public void FillSoutheast()
         {
-            TextBox tb = new TextBox()
-            {
-                TextWrapping = TextWrapping.Wrap,
-                Text = "Southeast",
-                VerticalAlignment = VerticalAlignment.Top,
-                IsEnabled = false,
-                Background = new SolidColorBrush(Colors.LightGray),
-                FontSize = 14,
-                HorizontalContentAlignment = HorizontalAlignment.Center,
-                VerticalContentAlignment = VerticalAlignment.Center,
-            };
-            Southeast_Grid.Children.Add(tb);
-            Grid.SetRow(tb, 0);
+            List<Team> southeastTeams = new List<Team>();
             for (int i = 0; i < 5; i++)
             {
-                RowDefinition row = new RowDefinition()
-                {
-                    Height = new GridLength(80),
-                };
-                Southeast_Grid.RowDefinitions.Add(row);
-                Rectangle rct = new Rectangle()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    Height = 80,
-                    Stroke = new SolidColorBrush(Colors.Gray),
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Width = 342,
-                    StrokeThickness = 2,
-                };
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.UriSource = new Uri("pack://application:,,,/Teams/1.jpg");
-                System.Windows.Controls.Image img = new System.Windows.Controls.Image()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    Height = 66,
-                    Width = 66,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Source = bitmap,
-                    Margin = new Thickness(10, 0, 0, 0)
-                };
-                Label lb = new Label()
-                {
-                    Content = teams[j].Name,
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    IsEnabled = false,
-                    Width = 250,
-                    Margin = new Thickness(81, 7, 0, 0)
-                };
+                southeastTeams.Add(teams[j]);
                 j++;
-
-                Southeast_Grid.Children.Add(lb);
-                Grid.SetRow(lb, i + 1);
-                Southeast_Grid.Children.Add(img);
-                Grid.SetRow(img, i + 1);
-                Southeast_Grid.Children.Add(rct);
-                Grid.SetRow(rct, i + 1);
             }
+            lv_Southeast.ItemsSource = southeastTeams;
         }
         public void FillNorthwest()
         {
-            TextBox tb = new TextBox()
-            {
-                TextWrapping = TextWrapping.Wrap,
-                Text = "Northwest",
-                VerticalAlignment = VerticalAlignment.Top,
-                IsEnabled = false,
-                Background = new SolidColorBrush(Colors.LightGray),
-                FontSize = 14,
-                HorizontalContentAlignment = HorizontalAlignment.Center,
-                VerticalContentAlignment = VerticalAlignment.Center,
-            };
-            Northwest_Grid.Children.Add(tb);
-            Grid.SetRow(tb, 0);
+            List<Team> northwestTeams = new List<Team>();
             for (int i = 0; i < 5; i++)
             {
-                RowDefinition row = new RowDefinition()
-                {
-                    Height = new GridLength(80),
-                };
-                Northwest_Grid.RowDefinitions.Add(row);
-                Rectangle rct = new Rectangle()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    Height = 80,
-                    Stroke = new SolidColorBrush(Colors.Gray),
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Width = 342,
-                    StrokeThickness = 2,
-                };
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.UriSource = new Uri("pack://application:,,,/Teams/1.jpg");
-                System.Windows.Controls.Image img = new System.Windows.Controls.Image()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    Height = 66,
-                    Width = 66,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Source = bitmap,
-                    Margin = new Thickness(10, 0, 0, 0)
-                };
-                Label lb = new Label()
-                {
-                    Content = teams[j].Name,
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    IsEnabled = false,
-                    Width = 250,
-                    Margin = new Thickness(81, 7, 0, 0)
-                };
+                northwestTeams.Add(teams[j]);
                 j++;
-
-                Northwest_Grid.Children.Add(lb);
-                Grid.SetRow(lb, i + 1);
-                Northwest_Grid.Children.Add(img);
-                Grid.SetRow(img, i + 1);
-                Northwest_Grid.Children.Add(rct);
-                Grid.SetRow(rct, i + 1);
             }
+            lv_Northwest.ItemsSource = northwestTeams;
         }
         public void FillPacific()
         {
-            TextBox tb = new TextBox()
-            {
-                TextWrapping = TextWrapping.Wrap,
-                Text = "Pacific",
-                VerticalAlignment = VerticalAlignment.Top,
-                IsEnabled = false,
-                Background = new SolidColorBrush(Colors.LightGray),
-                FontSize = 14,
-                HorizontalContentAlignment = HorizontalAlignment.Center,
-                VerticalContentAlignment = VerticalAlignment.Center,
-            };
-            Pacific_Grid.Children.Add(tb);
-            Grid.SetRow(tb, 0);
+            List<Team> pacificTeams = new List<Team>();
             for (int i = 0; i < 5; i++)
             {
-                RowDefinition row = new RowDefinition()
-                {
-                    Height = new GridLength(80),
-                };
-                Pacific_Grid.RowDefinitions.Add(row);
-                Rectangle rct = new Rectangle()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    Height = 80,
-                    Stroke = new SolidColorBrush(Colors.Gray),
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Width = 342,
-                    StrokeThickness = 2,
-                };
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.UriSource = new Uri("pack://application:,,,/Teams/1.jpg");
-                System.Windows.Controls.Image img = new System.Windows.Controls.Image()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    Height = 66,
-                    Width = 66,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Source = bitmap,
-                    Margin = new Thickness(10, 0, 0, 0)
-                };
-                Label lb = new Label()
-                {
-                    Content = teams[j].Name,
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    IsEnabled = false,
-                    Width = 250,
-                    Margin = new Thickness(81, 7, 0, 0)
-                };
+                pacificTeams.Add(teams[j]);
                 j++;
-
-                Pacific_Grid.Children.Add(lb);
-                Grid.SetRow(lb, i + 1);
-                Pacific_Grid.Children.Add(img);
-                Grid.SetRow(img, i + 1);
-                Pacific_Grid.Children.Add(rct);
-                Grid.SetRow(rct, i + 1);
             }
+            lv_Pacific.ItemsSource = pacificTeams;
         }
         public void FillSouthwest()
         {
-            TextBox tb = new TextBox()
-            {
-                TextWrapping = TextWrapping.Wrap,
-                Text = "Southwest",
-                VerticalAlignment = VerticalAlignment.Top,
-                IsEnabled = false,
-                Background = new SolidColorBrush(Colors.LightGray),
-                FontSize = 14,
-                HorizontalContentAlignment = HorizontalAlignment.Center,
-                VerticalContentAlignment = VerticalAlignment.Center,
-            };
-            Southwest_Grid.Children.Add(tb);
-            Grid.SetRow(tb, 0);
+            List<Team> southwestTeams = new List<Team>();
             for (int i = 0; i < 5; i++)
             {
-                RowDefinition row = new RowDefinition()
-                {
-                    Height = new GridLength(80),
-                };
-                Southwest_Grid.RowDefinitions.Add(row);
-                Rectangle rct = new Rectangle()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    Height = 80,
-                    Stroke = new SolidColorBrush(Colors.Gray),
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Width = 342,
-                    StrokeThickness = 2,
-                };
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.UriSource = new Uri("pack://application:,,,/Teams/1.jpg");
-                System.Windows.Controls.Image img = new System.Windows.Controls.Image()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    Height = 66,
-                    Width = 66,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Source = bitmap,
-                    Margin = new Thickness(10, 0, 0, 0)
-                };
-                Label lb = new Label()
-                {
-                    Content = teams[j].Name,
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    IsEnabled = false,
-                    Width = 250,
-                    Margin = new Thickness(81, 7, 0, 0)
-                };
+                southwestTeams.Add(teams[j]);
                 j++;
-
-                Southwest_Grid.Children.Add(lb);
-                Grid.SetRow(lb, i + 1);
-                Southwest_Grid.Children.Add(img);
-                Grid.SetRow(img, i + 1);
-                Southwest_Grid.Children.Add(rct);
-                Grid.SetRow(rct, i + 1);
             }
+            lv_Southwest.ItemsSource = southwestTeams;
         }
 
         private void btn_Back_Click(object sender, RoutedEventArgs e)

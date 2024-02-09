@@ -5,10 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:local="clr-namespace:NBAManagement" 
         mc:Ignorable="d" 
-        Title="MainWindow" Height="720" Width="1280">
+        Title="MainWindow" Height="720" Width="1280" Loaded="Window_Loaded">
     <Grid>
-        <Grid Margin="0,0,0,34" HorizontalAlignment="Center" Width="1260" Height="160" VerticalAlignment="Bottom">
+        <Grid Margin="0,515,0,0" HorizontalAlignment="Center" Width="1260" Height="160" VerticalAlignment="Top">
             <Rectangle Height="142" Margin="0,0,0,0" Stroke="Black"/>
+            <WrapPanel x:Name="ImageWrapPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,12,0,36">
+                <!--<Image Source="/Img/Pictures/1.jpg" Width="200"></Image>
+                    <Image Source="/Img/Pictures/2.jpg" Width="200"></Image>
+                    <Image Source="/Img/Pictures/3.jpg" Width="200"></Image>
+                    <Image Source="/Img/Pictures/4.jpg" Width="200"></Image>
+                    <Image Source="/Img/Pictures/5.jpg" Width="200"></Image>
+                    <Image Source="/Img/Pictures/8.jpg" Width="200"></Image>
+                    <Image Source="/Img/Pictures/9.jpg" Width="200"></Image>-->
+            </WrapPanel>
+            <Slider x:Name="ImageSlider" Minimum="0" Maximum="5" Value="0" 
+            Margin="10,16,10,11" 
+            TickFrequency="1" IsSnapToTickEnabled="True" 
+            SmallChange="1" LargeChange="1" ValueChanged="ImageSlider_ValueChanged" RenderTransformOrigin="0.5,0.5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
         </Grid>
         <Rectangle HorizontalAlignment="Center" Width="1280" Fill="#FF6995C2" Height="29" VerticalAlignment="Bottom"/>
         <Label Content="The current season is 2023–2024, and the NBA already has a history of 78 years" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="29" Width="1280" HorizontalContentAlignment="Center" Foreground="White" FontSize="14" FontFamily="Arial"/>
